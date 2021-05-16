@@ -1,6 +1,6 @@
 * Install  nodejs, wget
 
 ```
-make insall
+make install
 stremio
 ```
