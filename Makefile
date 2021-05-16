@@ -5,3 +5,7 @@ build:
 			&& mv server.js ../stremio-server.js || return 0
 	cp src/stremio.sh ./stremio
 	chmod +x ./stremio
+
+clean:
+	rm stremio
+	rm stremio-server.js
