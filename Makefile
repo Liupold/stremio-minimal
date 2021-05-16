@@ -6,6 +6,12 @@ build:
 	cp src/stremio.sh ./stremio
 	chmod +x ./stremio
 
+install: build
+	mkdir -p ~/.local/bin/
+	mkdir -p ~/.local/share
+	cp stremio ~/.local/bin
+	cp stremio-server.js ~/.local/share/
+
 clean:
 	rm stremio
 	rm stremio-server.js
