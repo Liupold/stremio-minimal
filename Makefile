@@ -1,4 +1,5 @@
 build:
+	git submodule update --init --recursive
 	[ ! -f stremio-server.js ] \
 			&& cd ./stremio-shell/ \
 			&& make -f ./release.makefile server.js \
