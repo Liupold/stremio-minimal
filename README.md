@@ -1,6 +1,9 @@
-* Install  nodejs, wget
+#  Requirements:
+* nodejs
+* wget
 
+# Install:
 ```
-make install
-stremio
+git clone 'https://github.com/Liupold/stremio-minimal.git' \
+&& stremio-minimal  && make install
 ```
