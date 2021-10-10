@@ -5,5 +5,5 @@
 # Install:
 ```
 git clone 'https://github.com/Liupold/stremio-minimal.git' \
-&& stremio-minimal  && make install
+&& cd stremio-minimal  && make install
 ```
