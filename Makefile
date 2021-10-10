@@ -16,3 +16,5 @@ install: build
 clean:
 	rm stremio
 	rm stremio-server.js
+
+update: clean build
