@@ -1,7 +1,7 @@
 #!/bin/sh
 opt="$1"
 
-[ "$opt" == "-k" ] && { pkill -f 'stremio-server.js'; exit "$?"; }
+[ "$opt" = "-k" ] && { pkill -f 'stremio-server.js'; exit "$?"; }
 
 which node 2> /dev/null || \
         echo "Error: Install Nonejs!"
