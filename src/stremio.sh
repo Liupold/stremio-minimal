@@ -6,5 +6,5 @@ opt="$1"
 which node 2> /dev/null || \
         echo "Error: Install Nonejs!"
 
-xdg-open 'https://app.strem.io/shell-v4.4/'
+xdg-open 'https://app.strem.io/'
 pgrep -f "node ./stremio-server.js" || setsid -f node ~/.local/share/stremio-server.js > /dev/null
