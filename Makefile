@@ -4,6 +4,7 @@ build:
 			&& cd ./stremio-shell/ \
 			&& make -f ./release.makefile server.js \
 			&& mv server.js ../stremio-server.js || echo "OK"
+	patch stremio-server.js < stremio-server.js.patch
 	cp src/stremio.sh ./stremio
 	chmod +x ./stremio
 

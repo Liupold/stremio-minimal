@@ -1,0 +1,784 @@
+7402c7402
+<   var mime = match && db[match[1].toLowerCase()]
+---
+>   var mime = match && db[match[1].toString().toLowerCase()]
+7440c7440
+<     if (charset) mime += '; charset=' + charset.toLowerCase()
+---
+>     if (charset) mime += '; charset=' + charset.toString().toLowerCase()
+7462c7462
+<   var exts = match && exports.extensions[match[1].toLowerCase()]
+---
+>   var exts = match && exports.extensions[match[1].toString().toLowerCase()]
+7485c7485
+<     .toLowerCase()
+---
+>     .toString().toLowerCase()
+10726c10726
+<   var debugColors = (process.env.DEBUG_COLORS || '').trim().toLowerCase();
+---
+>   var debugColors = (process.env.DEBUG_COLORS || '').trim().toString().toLowerCase();
+10938c10938
+<   var type = (match[2] || 'ms').toLowerCase();
+---
+>   var type = (match[2] || 'ms').toString().toLowerCase();
+12525c12525
+<     return h.toLowerCase() === 'accept-encoding'
+---
+>     return h.toString().toLowerCase() === 'accept-encoding'
+14021c14021
+<                 var domEvent = new CustomEvent(name.toLowerCase(), eventData);
+---
+>                 var domEvent = new CustomEvent(name.toString().toLowerCase(), eventData);
+14028c14028
+<                 var domEvent = new Event(name.toLowerCase(), {
+---
+>                 var domEvent = new Event(name.toString().toLowerCase(), {
+14042c14042
+<                 domEvent.initCustomEvent(name.toLowerCase(), false, true,
+---
+>                 domEvent.initCustomEvent(name.toString().toLowerCase(), false, true,
+14065c14065
+<             var methodName = "on" + name.toLowerCase();
+---
+>             var methodName = "on" + name.toString().toLowerCase();
+18775c18775
+<         classString(process).toLowerCase() === "[object process]";
+---
+>         classString(process).toString().toLowerCase() === "[object process]";
+22979c22979
+<       charset: encoding.toLowerCase()
+---
+>       charset: encoding.toString().toLowerCase()
+22993c22993
+<           charset: encoding.toLowerCase()
+---
+>           charset: encoding.toString().toLowerCase()
+23053c23053
+<   var encoding = (req.headers['content-encoding'] || 'identity').toLowerCase()
+---
+>   var encoding = (req.headers['content-encoding'] || 'identity').toString().toLowerCase()
+23256c23256
+<     return contentType.parse(req).parameters.charset.toLowerCase()
+---
+>     return contentType.parse(req).parameters.charset.toString().toLowerCase()
+23482c23482
+<     return contentType.parse(req).parameters.charset.toLowerCase()
+---
+>     return contentType.parse(req).parameters.charset.toString().toLowerCase()
+23675c23675
+<     return contentType.parse(req).parameters.charset.toLowerCase()
+---
+>     return contentType.parse(req).parameters.charset.toString().toLowerCase()
+23917c23917
+<   var obj = new ContentType(type.toLowerCase())
+---
+>   var obj = new ContentType(type.toString().toLowerCase())
+23928c23928
+<     key = match[1].toLowerCase()
+---
+>     key = match[1].toString().toLowerCase()
+24034c24034
+<   namespace = String(namespace).toLowerCase()
+---
+>   namespace = String(namespace).toString().toLowerCase()
+24040c24040
+<     if (str === '*' || str.toLowerCase() === namespace) {
+---
+>     if (str === '*' || str.toString().toLowerCase() === namespace) {
+32705c32705
+<   var val = value / map[unit.toLowerCase()];
+---
+>   var val = value / map[unit.toString().toLowerCase()];
+32751c32751
+<     unit = results[4].toLowerCase();
+---
+>     unit = results[4].toString().toLowerCase();
+35415c35415
+<     encoding =  String(encoding).toLowerCase()
+---
+>     encoding =  String(encoding).toString().toLowerCase()
+36965,36966c36965,36966
+<   if (typeof encoding === 'string') encoding = encoding.toLowerCase();
+<   if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
+---
+>   if (typeof encoding === 'string') encoding = encoding.toString().toLowerCase();
+>   if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toString().toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
+37391c37391
+<     if (path.toLowerCase().substr(0, route.length) !== route.toLowerCase()) {
+---
+>     if (path.toString().toLowerCase().substr(0, route.length) !== route.toString().toLowerCase()) {
+37741c37741
+<   var string = String(type).toLowerCase()
+---
+>   var string = String(type).toString().toLowerCase()
+37777c37777
+<   var charset = match[1].toLowerCase()
+---
+>   var charset = match[1].toString().toLowerCase()
+37832c37832
+<   var type = match[1].toLowerCase()
+---
+>   var type = match[1].toString().toLowerCase()
+37851c37851
+<     key = match[1].toLowerCase()
+---
+>     key = match[1].toString().toLowerCase()
+38092c38092
+<   var obj = new ContentType(type.toLowerCase())
+---
+>   var obj = new ContentType(type.toString().toLowerCase())
+38108c38108
+<       key = match[1].toLowerCase()
+---
+>       key = match[1].toString().toLowerCase()
+38401c38401
+<       ? opt.sameSite.toLowerCase() : opt.sameSite;
+---
+>       ? opt.sameSite.toString().toLowerCase() : opt.sameSite;
+39283c39283
+<     .slice(8, -1).toLowerCase();
+---
+>     .slice(8, -1).toString().toLowerCase();
+39355c39355
+<   var type = (match[2] || 'ms').toLowerCase()
+---
+>   var type = (match[2] || 'ms').toString().toLowerCase()
+39504c39504
+<     (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+---
+>     (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toString().toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+39506c39506
+<     (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+---
+>     (typeof navigator !== 'undefined' && navigator && navigator.userAgent && navigator.userAgent.toString().toLowerCase().match(/applewebkit\/(\d+)/));
+39890c39890
+<     .toLowerCase()
+---
+>     .toString().toLowerCase()
+40157c40157
+<   var ns = String(namespace).toLowerCase()
+---
+>   var ns = String(namespace).toString().toLowerCase()
+40163c40163
+<     if (val && (val === '*' || val.toLowerCase() === ns)) {
+---
+>     if (val && (val === '*' || val.toString().toLowerCase() === ns)) {
+41750c41750
+<       if (i === -1) data[b.toString().toLowerCase()] = true
+---
+>       if (i === -1) data[b.toString().toString().toLowerCase()] = true
+41753c41753
+<         var key = b.slice(0, i).toString().toLowerCase()
+---
+>         var key = b.slice(0, i).toString().toString().toLowerCase()
+44059c44059
+<       if (!parser.noscript && parser.tagName.toLowerCase() === 'script') {
+---
+>       if (!parser.noscript && parser.tagName.toString().toLowerCase() === 'script') {
+44144c44144
+<     var entityLC = entity.toLowerCase()
+---
+>     var entityLC = entity.toString().toLowerCase()
+44167c44167
+<     if (numStr.toLowerCase() !== entity) {
+---
+>     if (numStr.toString().toLowerCase() !== entity) {
+45070c45070
+<     return engines[infoHash.toLowerCase()]; 
+---
+>     return engines[infoHash.toString().toLowerCase()]; 
+45075c45075
+<     return !!engines[infoHash.toLowerCase()]; 
+---
+>     return !!engines[infoHash.toString().toLowerCase()]; 
+45128c45128
+<         var infoHash = parts[0].toLowerCase();
+---
+>         var infoHash = parts[0].toString().toLowerCase();
+45169c45169
+<     var ih = req.params.infoHash.toLowerCase();
+---
+>     var ih = req.params.infoHash.toString().toLowerCase();
+45198c45198
+<             ih = parsed.infoHash.toLowerCase()
+---
+>             ih = parsed.infoHash.toString().toLowerCase()
+45594c45594
+< 		let type = options && options.type !== undefined && String(options.type).toLowerCase();
+---
+> 		let type = options && options.type !== undefined && String(options.type).toString().toLowerCase();
+45786c45786
+< 				type: ct.toLowerCase()
+---
+> 				type: ct.toString().toLowerCase()
+46241c46241
+< 	name = name.toLowerCase();
+---
+> 	name = name.toString().toLowerCase();
+46243c46243
+< 		if (key.toLowerCase() === name) {
+---
+> 		if (key.toString().toLowerCase() === name) {
+46482c46482
+< 		return k.toLowerCase();
+---
+> 		return k.toString().toLowerCase();
+46486c46486
+< 		return [k.toLowerCase(), headers[MAP][k].join(', ')];
+---
+> 		return [k.toString().toLowerCase(), headers[MAP][k].join(', ')];
+48264c48264
+<   var lc = name.toLowerCase();
+---
+>   var lc = name.toString().toLowerCase();
+48694c48694
+<   return val.toLowerCase() === 'xmlhttprequest';
+---
+>   return val.toString().toLowerCase() === 'xmlhttprequest';
+49268c49268
+<       if (key.toLowerCase() !== 'content-disposition') {
+---
+>       if (key.toString().toLowerCase() !== 'content-disposition') {
+49470c49470
+<     if (field.toLowerCase() === 'content-type') {
+---
+>     if (field.toString().toLowerCase() === 'content-type') {
+49476c49476
+<         if (charset) value += '; charset=' + charset.toLowerCase();
+---
+>         if (charset) value += '; charset=' + charset.toString().toLowerCase();
+50762c50762
+<   var name = method.toLowerCase();
+---
+>   var name = method.toString().toLowerCase();
+50804c50804
+<   var method = req.method.toLowerCase();
+---
+>   var method = req.method.toString().toLowerCase();
+51547c51547
+<       charset: encoding.toLowerCase(),
+---
+>       charset: encoding.toString().toLowerCase(),
+51561c51561
+<           charset: encoding.toLowerCase(),
+---
+>           charset: encoding.toString().toLowerCase(),
+51622c51622
+<   var encoding = (req.headers['content-encoding'] || 'identity').toLowerCase()
+---
+>   var encoding = (req.headers['content-encoding'] || 'identity').toString().toLowerCase()
+51847c51847
+<     return (contentType.parse(req).parameters.charset || '').toLowerCase()
+---
+>     return (contentType.parse(req).parameters.charset || '').toString().toLowerCase()
+52000c52000
+<     return (contentType.parse(req).parameters.charset || '').toLowerCase()
+---
+>     return (contentType.parse(req).parameters.charset || '').toString().toLowerCase()
+52196c52196
+<     return (contentType.parse(req).parameters.charset || '').toLowerCase()
+---
+>     return (contentType.parse(req).parameters.charset || '').toString().toLowerCase()
+52400c52400
+<   if (!unit || !map[unit.toLowerCase()]) {
+---
+>   if (!unit || !map[unit.toString().toLowerCase()]) {
+52414c52414
+<   var val = value / map[unit.toLowerCase()];
+---
+>   var val = value / map[unit.toString().toLowerCase()];
+52460c52460
+<     unit = results[4].toLowerCase();
+---
+>     unit = results[4].toString().toLowerCase();
+52520c52520
+<     (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+---
+>     (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toString().toLowerCase().match(/firefox\/(\d+)/) && parseInt(RegExp.$1, 10) >= 31) ||
+52522c52522
+<     (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toLowerCase().match(/applewebkit\/(\d+)/));
+---
+>     (typeof navigator !== 'undefined' && navigator.userAgent && navigator.userAgent.toString().toLowerCase().match(/applewebkit\/(\d+)/));
+52899c52899
+<     .toLowerCase()
+---
+>     .toString().toLowerCase()
+56857c56857
+<             return enc && nodeNativeEncodings[enc.toLowerCase()];
+---
+>             return enc && nodeNativeEncodings[enc.toString().toLowerCase()];
+56865c56865
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+56903c56903
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+56928c56928
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+56940c56940
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+56969c56969
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+57113c57113
+<     var enc = (''+encoding).toLowerCase().replace(/[^0-9a-z]|:\d{4}$/g, "");
+---
+>     var enc = (''+encoding).toString().toLowerCase().replace(/[^0-9a-z]|:\d{4}$/g, "");
+58581c58581
+<   namespace = String(namespace).toLowerCase()
+---
+>   namespace = String(namespace).toString().toLowerCase()
+58587c58587
+<     if (str === '*' || str.toLowerCase() === namespace) {
+---
+>     if (str === '*' || str.toString().toLowerCase() === namespace) {
+59227c59227
+<     statuses[message.toLowerCase()] = status
+---
+>     statuses[message.toString().toLowerCase()] = status
+59267c59267
+<   n = status[code.toLowerCase()]
+---
+>   n = status[code.toString().toLowerCase()]
+59687c59687
+<     statuses[message.toLowerCase()] = status
+---
+>     statuses[message.toString().toLowerCase()] = status
+59727c59727
+<   n = status[code.toLowerCase()]
+---
+>   n = status[code.toString().toLowerCase()]
+63411c63411
+<             return enc && nodeNativeEncodings[enc.toLowerCase()];
+---
+>             return enc && nodeNativeEncodings[enc.toString().toLowerCase()];
+63419c63419
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+63457c63457
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+63482c63482
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+63494c63494
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+63523c63523
+<             encoding = String(encoding || 'utf8').toLowerCase();
+---
+>             encoding = String(encoding || 'utf8').toString().toLowerCase();
+63663c63663
+<     var enc = (''+encoding).toLowerCase().replace(/[^0-9a-z]|:\d{4}$/g, "");
+---
+>     var enc = (''+encoding).toString().toLowerCase().replace(/[^0-9a-z]|:\d{4}$/g, "");
+64182c64182
+<   return family ? family.toLowerCase() : 'ipv4';
+---
+>   return family ? family.toString().toLowerCase() : 'ipv4';
+64454c64454
+<       var itemFamily = details.family.toLowerCase();
+---
+>       var itemFamily = details.family.toString().toLowerCase();
+64468c64468
+<       details.family = details.family.toLowerCase();
+---
+>       details.family = details.family.toString().toLowerCase();
+65233,65234c65233,65234
+<     var p = pathext[i].toLowerCase()
+<     if (p && path.substr(-p.length).toLowerCase() === p) {
+---
+>     var p = pathext[i].toString().toLowerCase()
+>     if (p && path.substr(-p.length).toString().toLowerCase() === p) {
+72397c72397
+<         total += +rs[1] * timeUnits[rs[2].toLowerCase()];
+---
+>         total += +rs[1] * timeUnits[rs[2].toString().toLowerCase()];
+73283c73283
+<       if (!parser.noscript && parser.tagName.toLowerCase() === 'script') {
+---
+>       if (!parser.noscript && parser.tagName.toString().toLowerCase() === 'script') {
+73368c73368
+<     var entityLC = entity.toLowerCase()
+---
+>     var entityLC = entity.toString().toLowerCase()
+73391c73391
+<     if (isNaN(num) || numStr.toLowerCase() !== entity) {
+---
+>     if (isNaN(num) || numStr.toString().toLowerCase() !== entity) {
+75400c75400
+< 		name = ret[1].toLowerCase() + ret[2];
+---
+> 		name = ret[1].toString().toLowerCase() + ret[2];
+75478c75478
+< 		name = ret[1].toLowerCase() + ret[2];
+---
+> 		name = ret[1].toString().toLowerCase() + ret[2];
+75547c75547
+< 		name = ret[1].toLowerCase() + ret[2];
+---
+> 		name = ret[1].toString().toLowerCase() + ret[2];
+81257c81257
+<     key = match[1].toLowerCase()
+---
+>     key = match[1].toString().toLowerCase()
+81331c81331
+<   var match = typeRegExp.exec(string.toLowerCase())
+---
+>   var match = typeRegExp.exec(string.toString().toLowerCase())
+81450c81450
+<     return method.toLowerCase();
+---
+>     return method.toString().toLowerCase();
+88355c88355
+<   var mime = match && db[match[1].toLowerCase()]
+---
+>   var mime = match && db[match[1].toString().toLowerCase()]
+88393c88393
+<     if (charset) mime += '; charset=' + charset.toLowerCase()
+---
+>     if (charset) mime += '; charset=' + charset.toString().toLowerCase()
+88415c88415
+<   var exts = match && exports.extensions[match[1].toLowerCase()]
+---
+>   var exts = match && exports.extensions[match[1].toString().toLowerCase()]
+88438c88438
+<     .toLowerCase()
+---
+>     .toString().toLowerCase()
+88559c88559
+<   var ext = path.replace(/.*[\.\/\\]/, '').toLowerCase();
+---
+>   var ext = path.replace(/.*[\.\/\\]/, '').toString().toLowerCase();
+88568c88568
+<   var type = mimeType.match(/^\s*([^;\s]*)(?:;|\s|$)/)[1].toLowerCase();
+---
+>   var type = mimeType.match(/^\s*([^;\s]*)(?:;|\s|$)/)[1].toString().toLowerCase();
+89793c89793
+<         hit = f.toLowerCase() === p.toLowerCase()
+---
+>         hit = f.toString().toLowerCase() === p.toString().toLowerCase()
+90419c90419
+<         return key ? key.toLowerCase().replace('_', '-') : key;
+---
+>         return key ? key.toString().toLowerCase().replace('_', '-') : key;
+90531c90531
+<         var lowerCase = unit.toLowerCase();
+---
+>         var lowerCase = unit.toString().toLowerCase();
+90536c90536
+<         return typeof units === 'string' ? aliases[units] || aliases[units.toLowerCase()] : undefined;
+---
+>         return typeof units === 'string' ? aliases[units] || aliases[units.toString().toLowerCase()] : undefined;
+92566c92566
+<         return ((input + '').toLowerCase().charAt(0) === 'p');
+---
+>         return ((input + '').toString().toLowerCase().charAt(0) === 'p');
+101354c101354
+<   var type = (match[2] || 'ms').toLowerCase();
+---
+>   var type = (match[2] || 'ms').toString().toLowerCase();
+101618,101619c101618,101619
+<       s1 = s1.toLowerCase()
+<       s2 = s2.toLowerCase()
+---
+>       s1 = s1.toString().toLowerCase()
+>       s2 = s2.toString().toLowerCase()
+101661c101661
+<     return name.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase().replace('the ','')
+---
+>     return name.replace(/[^a-zA-Z0-9 ]/g, '').toString().toLowerCase().replace('the ','')
+101691c101691
+<     var name = args.name.toLowerCase()
+---
+>     var name = args.name.toString().toLowerCase()
+102259c102259
+<       found = matches[1].toLowerCase();
+---
+>       found = matches[1].toString().toLowerCase();
+102624c102624
+<     config.headers[h.toLowerCase()] = options.headers[h];
+---
+>     config.headers[h.toString().toLowerCase()] = options.headers[h];
+102869c102869
+<       var parser_name = config.parser.toString().toLowerCase();
+---
+>       var parser_name = config.parser.toString().toString().toLowerCase();
+103468c103468
+<   if(spec.charset.toLowerCase() === charset.toLowerCase()){
+---
+>   if(spec.charset.toString().toLowerCase() === charset.toString().toLowerCase()){
+103655c103655
+<   if(spec.encoding.toLowerCase() === encoding.toLowerCase()){
+---
+>   if(spec.encoding.toString().toLowerCase() === encoding.toString().toLowerCase()){
+103831c103831
+<   if(spec.full.toLowerCase() === p.full.toLowerCase()){
+---
+>   if(spec.full.toString().toLowerCase() === p.full.toString().toLowerCase()){
+103833c103833
+<   } else if (spec.prefix.toLowerCase() === p.full.toLowerCase()) {
+---
+>   } else if (spec.prefix.toString().toLowerCase() === p.full.toString().toLowerCase()) {
+103835c103835
+<   } else if (spec.full.toLowerCase() === p.prefix.toLowerCase()) {
+---
+>   } else if (spec.full.toString().toLowerCase() === p.prefix.toString().toLowerCase()) {
+103970c103970
+<       var key = pair[0].toLowerCase();
+---
+>       var key = pair[0].toString().toLowerCase();
+104029c104029
+<   if(spec.type.toLowerCase() == p.type.toLowerCase()) {
+---
+>   if(spec.type.toString().toLowerCase() == p.type.toString().toLowerCase()) {
+104035c104035
+<   if(spec.subtype.toLowerCase() == p.subtype.toLowerCase()) {
+---
+>   if(spec.subtype.toString().toLowerCase() == p.subtype.toString().toLowerCase()) {
+104044c104044
+<       return spec.params[k] == '*' || (spec.params[k] || '').toLowerCase() == (p.params[k] || '').toLowerCase();
+---
+>       return spec.params[k] == '*' || (spec.params[k] || '').toString().toLowerCase() == (p.params[k] || '').toString().toLowerCase();
+104514c104514
+<     switch (headers.NTS.toLowerCase()) {
+---
+>     switch (headers.NTS.toString().toLowerCase()) {
+104560c104560
+<     var method = (type[0] || '').toLowerCase()
+---
+>     var method = (type[0] || '').toString().toLowerCase()
+105829c105829
+<     torrentId.infoHash = torrentId.infoHash.toLowerCase()
+---
+>     torrentId.infoHash = torrentId.infoHash.toString().toLowerCase()
+106407c106407
+<         result.infoHash = m[1].toLowerCase()
+---
+>         result.infoHash = m[1].toString().toLowerCase()
+110928c110928
+<                 if (token.toLowerCase() !== "returns")
+---
+>                 if (token.toString().toLowerCase() !== "returns")
+111048c111048
+<                     fld["name"] = grp["name"].toLowerCase();
+---
+>                     fld["name"] = grp["name"].toString().toLowerCase();
+111165c111165
+<                     value = this.tn.next().toLowerCase() === 'true';
+---
+>                     value = this.tn.next().toString().toLowerCase() === 'true';
+112888c112888
+<                             buffer.writeVarint32(value.toLowerCase() === 'false' ? 0 : !!value);
+---
+>                             buffer.writeVarint32(value.toString().toLowerCase() === 'false' ? 0 : !!value);
+117800,117801c117800,117801
+<   if (typeof encoding === 'string') encoding = encoding.toLowerCase();
+<   if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
+---
+>   if (typeof encoding === 'string') encoding = encoding.toString().toLowerCase();
+>   if (!(['hex', 'utf8', 'utf-8', 'ascii', 'binary', 'base64', 'ucs2', 'ucs-2', 'utf16le', 'utf-16le', 'raw'].indexOf((encoding + '').toString().toLowerCase()) > -1)) throw new TypeError('Unknown encoding: ' + encoding);
+118397c118397
+<   return a.toLowerCase().localeCompare(b.toLowerCase())
+---
+>   return a.toString().toLowerCase().localeCompare(b.toString().toLowerCase())
+121264c121264
+<   var name = method.toLowerCase()
+---
+>   var name = method.toString().toLowerCase()
+121307c121307
+<   var method = req.method.toLowerCase()
+---
+>   var method = req.method.toString().toLowerCase()
+122352c122352
+<       if (!parser.noscript && parser.tagName.toLowerCase() === 'script') {
+---
+>       if (!parser.noscript && parser.tagName.toString().toLowerCase() === 'script') {
+122437c122437
+<     var entityLC = entity.toLowerCase()
+---
+>     var entityLC = entity.toString().toLowerCase()
+122460c122460
+<     if (numStr.toLowerCase() !== entity) {
+---
+>     if (numStr.toString().toLowerCase() !== entity) {
+124296c124296
+<   var ext = path.replace(/^.*[\.\/\\]/, '').toLowerCase();
+---
+>   var ext = path.replace(/^.*[\.\/\\]/, '').toString().toLowerCase();
+124305c124305
+<   var type = mimeType.match(/^\s*([^;\s]*)(?:;|\s|$)/)[1].toLowerCase();
+---
+>   var type = mimeType.match(/^\s*([^;\s]*)(?:;|\s|$)/)[1].toString().toLowerCase();
+124388c124388
+<   if (opts.headers) Object.keys(opts.headers).forEach(k => (headers[k.toLowerCase()] = opts.headers[k]))
+---
+>   if (opts.headers) Object.keys(opts.headers).forEach(k => (headers[k.toString().toLowerCase()] = opts.headers[k]))
+126315c126315
+<   return !id || id.toLowerCase() === 'x' || id === '*';
+---
+>   return !id || id.toString().toLowerCase() === 'x' || id === '*';
+127066c127066
+<     var name = stream.codec_name.toLowerCase()
+---
+>     var name = stream.codec_name.toString().toLowerCase()
+127071c127071
+<         return name.indexOf('aac') != -1 // || stream.codec_name.toLowerCase().indexOf('ac3') != -1
+---
+>         return name.indexOf('aac') != -1 // || stream.codec_name.toString().toLowerCase().indexOf('ac3') != -1
+127644c127644
+<             var containers = line.toLowerCase().split(/\s*,\s*/).slice(1,-1); 
+---
+>             var containers = line.toString().toLowerCase().split(/\s*,\s*/).slice(1,-1); 
+127676,127677c127676,127677
+<                     codec_type: streamParts[2].toLowerCase(), 
+<                     codec_name: codecParts[0].toLowerCase(), 
+---
+>                     codec_type: streamParts[2].toString().toLowerCase(), 
+>                     codec_name: codecParts[0].toString().toLowerCase(), 
+129281c129281
+< 	const ih = (torrent.infoHash || "").toLowerCase()
+---
+> 	const ih = (torrent.infoHash || "").toString().toLowerCase()
+129771c129771
+< 		let type = options && options.type !== undefined && String(options.type).toLowerCase();
+---
+> 		let type = options && options.type !== undefined && String(options.type).toString().toLowerCase();
+129969c129969
+< 				type: ct.toLowerCase()
+---
+> 				type: ct.toString().toLowerCase()
+130406c130406
+< 	name = name.toLowerCase();
+---
+> 	name = name.toString().toLowerCase();
+130408c130408
+< 		if (key.toLowerCase() === name) {
+---
+> 		if (key.toString().toLowerCase() === name) {
+130645c130645
+< 		return k.toLowerCase();
+---
+> 		return k.toString().toLowerCase();
+130649c130649
+< 		return [k.toLowerCase(), headers[MAP][k].join(', ')];
+---
+> 		return [k.toString().toLowerCase(), headers[MAP][k].join(', ')];
+131384c131384
+<     return n.toLowerCase()
+---
+>     return n.toString().toLowerCase()
+131627,131628c131627,131628
+<                 || excluded[word.toLowerCase()] 
+<                 || ((["ep", "episode", "season"].indexOf(word.toLowerCase()) > -1) && !isNaN(segSplit[i+1])) // TODO: more than that, match for stamp too
+---
+>                 || excluded[word.toString().toLowerCase()] 
+>                 || ((["ep", "episode", "season"].indexOf(word.toString().toLowerCase()) > -1) && !isNaN(segSplit[i+1])) // TODO: more than that, match for stamp too
+131638c131638
+<             .map(function(x) { return x[0].toUpperCase() + x.slice(1).toLowerCase() })
+---
+>             .map(function(x) { return x[0].toUpperCase() + x.slice(1).toString().toLowerCase() })
+131642c131642
+<     isSample = isSample || ((segments[1] || "").toLowerCase() == "sample"); /* The directory where the file resides */
+---
+>     isSample = isSample || ((segments[1] || "").toString().toLowerCase() == "sample"); /* The directory where the file resides */
+131649c131649
+<     else canBeMovie = meta.hasOwnProperty("year") || meta.hasOwnProperty("diskNumber") || movieKeywords.some(function(keyword) { return segments.join("/").toLowerCase().search(keyword) > -1 });
+---
+>     else canBeMovie = meta.hasOwnProperty("year") || meta.hasOwnProperty("diskNumber") || movieKeywords.some(function(keyword) { return segments.join("/").toString().toLowerCase().search(keyword) > -1 });
+134728c134728
+<       details.family = details.family.toLowerCase();
+---
+>       details.family = details.family.toString().toLowerCase();
+134739c134739
+<       details.family = details.family.toLowerCase();
+---
+>       details.family = details.family.toString().toLowerCase();
+134779c134779
+<   return family ? family.toLowerCase() : 'ipv4';
+---
+>   return family ? family.toString().toLowerCase() : 'ipv4';
+135548c135548
+<        switch (encoding && encoding.toLowerCase()) {
+---
+>        switch (encoding && encoding.toString().toLowerCase()) {
+135570c135570
+<   this.encoding = (encoding || 'utf8').toLowerCase().replace(/[-_]/, '');
+---
+>   this.encoding = (encoding || 'utf8').toString().toLowerCase().replace(/[-_]/, '');
+141621c141621
+<   var vals = parse(header.toLowerCase())
+---
+>   var vals = parse(header.toString().toLowerCase())
+141629c141629
+<     var fld = fields[i].toLowerCase()
+---
+>     var fld = fields[i].toString().toLowerCase()
+146597c146597
+<   if (typeof req.headers.upgrade === 'undefined' || req.headers.upgrade.toLowerCase() !== 'websocket') {
+---
+>   if (typeof req.headers.upgrade === 'undefined' || req.headers.upgrade.toString().toLowerCase() !== 'websocket') {
+147009c147009
+<     return str.toLowerCase();
+---
+>     return str.toString().toLowerCase();
+147013c147013
+<     return str.charAt(0).toLowerCase() + str.slice(1);
+---
+>     return str.charAt(0).toString().toLowerCase() + str.slice(1);
+147029c147029
+<       str = str.toLowerCase() === 'true';
+---
+>       str = str.toString().toLowerCase() === 'true';
+150531c150531
+<     if (!parser.noscript && parser.tagName.toLowerCase() === "script") {
+---
+>     if (!parser.noscript && parser.tagName.toString().toLowerCase() === "script") {
+150597c150597
+<   var entity = parser.entity.toLowerCase()
+---
+>   var entity = parser.entity.toString().toLowerCase()
+150613c150613
+<   if (numStr.toLowerCase() !== entity) {
+---
+>   if (numStr.toString().toLowerCase() !== entity) {
+152611c152611
+<         let title = getText(row.metadataRowRenderer.title).toLowerCase();
+---
+>         let title = getText(row.metadataRowRenderer.title).toString().toLowerCase();
+155324c155324
+< 		let type = options && options.type !== undefined && String(options.type).toLowerCase();
+---
+> 		let type = options && options.type !== undefined && String(options.type).toString().toLowerCase();
+155491c155491
+< 				type: ct.toLowerCase()
+---
+> 				type: ct.toString().toLowerCase()
+155961c155961
+< 	name = name.toLowerCase();
+---
+> 	name = name.toString().toLowerCase();
+155963c155963
+< 		if (key.toLowerCase() === name) {
+---
+> 		if (key.toString().toLowerCase() === name) {
+156200c156200
+< 		return k.toLowerCase();
+---
+> 		return k.toString().toLowerCase();
+156204c156204
+< 		return [k.toLowerCase(), headers[MAP][k].join(', ')];
+---
+> 		return [k.toString().toLowerCase(), headers[MAP][k].join(', ')];
