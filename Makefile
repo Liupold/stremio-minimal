@@ -1,21 +1,18 @@
-build:
-	git submodule update --init --recursive
-	[ ! -f stremio-server.js ] \
-			&& cd ./stremio-shell/ \
-			&& make -f ./release.makefile server.js \
-			&& mv server.js ../stremio-server.js || echo "OK"
-	patch stremio-server.js < stremio-server.js.patch
-	cp src/stremio.sh ./stremio
-	chmod +x ./stremio
+SERVER_JS_URL=$(shell wget -O - --quiet \
+							https://raw.githubusercontent.com/Stremio/stremio-shell/master/server-url.txt)
+JS_DIR=${HOME}/.local/share
+BIN_DIR=${HOME}/.local/bin
 
-install: build
-	mkdir -p ~/.local/bin/
-	mkdir -p ~/.local/share
-	cp stremio ~/.local/bin
-	cp stremio-server.js ~/.local/share/
+install: dir
+	@echo USING: ${SERVER_JS_URL}
+	wget ${SERVER_JS_URL} -O "${HOME}/.local/share/stremio-server.js"
+	cp stremio.sh ${BIN_DIR}/stremio
+	chmod +x "${BIN_DIR}/stremio"
 
-clean:
-	rm stremio
-	rm stremio-server.js
+dir:
+	mkdir -p ${JS_DIR} ${BIN_DIR}
 
-update: clean build
+unistall:
+	rm "${JS_DIR}/stremio-server.js" "${BIN_DIR}/stremio"
+
+update: install
